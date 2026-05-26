@@ -1,0 +1,334 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+/* Legacy pages without .project-page stay centered if needed */
+body:not(.project-page) {
+  text-align: center;
+}
+
+/* —— Project site (Test.htm) —— */
+body.project-page {
+  background: #f6f7f9;
+}
+
+.site-nav {
+  background: #14213d;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav .brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.site-nav a {
+  color: #e8eaef;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4cc9f0 0%, #4361ee 55%, #3a0ca3 100%);
+  color: #fff;
+  padding: 3.5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  opacity: 0.95;
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  margin: 0 auto 1rem;
+  max-width: 18ch;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.hero-lead {
+  margin: 0 auto 1.75rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  opacity: 0.96;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-primary {
+  background: #fff;
+  color: #3a0ca3;
+}
+
+.btn-primary:hover {
+  background: #f0f0f5;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary {
+  background: #14213d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #1f3258;
+}
+
+.section {
+  padding: 2.75rem 1.5rem;
+}
+
+.section-tint {
+  background: #eef1f6;
+}
+
+.section-cta {
+  background: #14213d;
+  color: #e8eaef;
+}
+
+.section-cta h2 {
+  color: #fff;
+}
+
+.section-cta .section-intro {
+  color: #c9cfdb;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-inner.narrow {
+  max-width: 640px;
+}
+
+.section h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.section-intro {
+  margin: 0 0 1.5rem;
+  color: #444;
+  max-width: 40rem;
+}
+
+.prose {
+  margin: 0;
+  max-width: 42rem;
+  color: #333;
+}
+
+.topic-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.topic-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e6ed;
+}
+
+.topic-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #14213d;
+}
+
+.topic-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-list details {
+  background: #fff;
+  border: 1px solid #dde2ea;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.faq-list summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: #14213d;
+}
+
+.faq-list details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.faq-list details p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.steps {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+  color: #333;
+}
+
+.steps li {
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 40rem;
+  border-left: 3px solid #4361ee;
+  padding-left: 0.85rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.fine-print {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9aa3b5;
+}
+
+.site-footer {
+  background: #0d1117;
+  color: #aeb8c7;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Legacy nav (non-project pages) */
+nav:not(.site-nav) {
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav:not(.site-nav) ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav:not(.site-nav) a {
+  color: white;
+  text-decoration: none;
+}
+
+body:not(.project-page) .hero {
+  background: lightblue;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+body:not(.project-page) section {
+  padding: 40px 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: darkblue;
+}
+
+body:not(.project-page) footer {
+  background: #222;
+  color: white;
+  padding: 10px;
+}
